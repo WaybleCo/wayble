@@ -28,11 +28,13 @@ const Navbar = () => {
             <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
                 {
                     Links.map((link) => (
-                    <li className='md:ml-8 md:my-0 my-7 font-semibold'>
+                    <li className='md:ml-8 md:my-0 my-7 font-semibold text-center'>
                         <a href={link.link} className='text-darkBlue hover:text-mediumBlue duration-500'>{link.name}</a>
                     </li>))
                 }
-                <button className='btn bg-mediumBlue text-primary md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static hover:bg-darkBlue'>Get Started</button>
+                <div className='flex justify-center'>
+                  <button className='btn bg-mediumBlue text-primary md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static hover:bg-darkBlue'>Get Started</button>
+                </div>
             </ul>
            </div>
         </div>
