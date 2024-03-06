@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Picture from "../assets/wayble_word-removebg-preview.png";
+import { Link } from "react-router-dom" 
 
 const Navbar = () => {
     let Links =[
-        {name:"Home",link:"/"},
-        {name:"Hiring",link:"/"},
-        {name:"About",link:"/"},
+        {name:"Home",link:"/home"},
+        {name:"Hiring",link:"/hiring"},
+        {name:"About",link:"/about"},
 
       ];
       let [open, setOpen] =useState(false);
 
     return (
-        <div className='text-darkBlue shadow-md w-full fixed top-0 left-0'>
-           <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+        <div className='text-darkBlue shadow-md w-full fixed top-0 left-0 '>
+           <div className='md:flex items-center justify-between bg-blue-200 py-4 md:px-10 px-7'>
 
             <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
                 <img src={Picture} alt="wayble logo" className="h-8"/>
@@ -25,7 +26,7 @@ const Navbar = () => {
                 }
             </div>
 
-            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
+            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-blue-200 md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
                 {
                     Links.map((link) => (
                     <li className='md:ml-8 md:my-0 my-7 font-semibold text-center'>

@@ -1,12 +1,24 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero';
+import Footer from "./components/Footer"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-    </div>
+    <Router>
+      <div>
+        <Navbar/>
+        <Routes>
+          <Route path='/'>element={Hero}</Route>
+
+        </Routes>
+        
+        <Footer/>
+
+      </div>
+    </Router>
+    
   );
 }
 
