@@ -1,37 +1,42 @@
 import React, { useState } from 'react';
-import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
 import Picture from "../assets/wayble_word-removebg-preview.png";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+    let Links =[
+        {name:"Home",link:"/"},
+        {name:"Hiring",link:"/"},
+        {name:"About",link:"/"},
 
-  const handleNav = () => {
-    setNav(!nav);
-  };
+      ];
+      let [open, setOpen] =useState(false);
 
-  return (
-    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-[#0A2D49]'>
-      <img src={Picture} alt="wayble logo" className="h-16"/>
-      <ul className='hidden md:flex'>
-        <li className='p-4'>Home</li>
-        <li className='p-4'>Hiring</li>
-        <li className='p-4'>About</li>
-        <li className='p-4'>Login</li>
-        <li className='p-4'>Sign Up</li>
-      </ul>
-      <div onClick={handleNav} className='block md:hidden'>
-          {nav ? <AiOutlineClose size={20}/> : <AiOutlineMenu size={20} />}
-      </div>
-        <ul className={nav ? 'fixed left-0 top-0 w-[40%] h-full border-r border-r-blue-250 bg-[#ffffff] ease-in-out duration-500' : 'ease-in-out duration-500 fixed left-[-100%]'}>
-          <img src={Picture} alt="wayble logo" className='h-16 mx-auto mt-4'/>
-          <li className='p-4 border-b border-blue-250 text-center'>Home</li>
-          <li className='p-4 border-b border-blue-250 text-center'>Hiring</li>
-          <li className='p-4 border-b border-blue-250 text-center'>About</li>
-          <li className='p-4 border-b border-blue-250 text-center'>Login</li>
-          <li className='p-4 text-center'>Sign Up</li>
-        </ul>
-    </div>
-  );
+    return (
+        <div className='text-darkBlue shadow-md w-full fixed top-0 left-0'>
+           <div className='md:flex items-center justify-between bg-white py-4 md:px-10 px-7'>
+
+            <div className='font-bold text-2xl cursor-pointer flex items-center gap-1'>
+                <img src={Picture} alt="wayble logo" className="h-8"/>
+            </div>
+
+            <div onClick={()=>setOpen(!open)} className='absolute right-8 top-6 cursor-pointer md:hidden w-7 h-7'>
+                {
+                    open ? <XMarkIcon/> : <Bars3BottomRightIcon />
+                }
+            </div>
+
+            <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] left-0 w-full md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-12' : 'top-[-490px]'}`}>
+                {
+                    Links.map((link) => (
+                    <li className='md:ml-8 md:my-0 my-7 font-semibold'>
+                        <a href={link.link} className='text-darkBlue hover:text-mediumBlue duration-500'>{link.name}</a>
+                    </li>))
+                }
+                <button className='btn bg-mediumBlue text-primary md:ml-8 font-semibold px-3 py-1 rounded duration-500 md:static hover:bg-darkBlue'>Get Started</button>
+            </ul>
+           </div>
+        </div>
+    );
 };
 
 export default Navbar;
