@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero';
 import Carousel from './components/Carousel';
 import Footer from "./components/Footer"
+import HomePage from "./components/HomePage"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -10,11 +11,9 @@ function App() {
     <Router>
       <div>
         <Navbar/>
-        <Carousel/>
-        {/*<Navbar/>*/}
-        <Hero/>
+        
         <Routes>
-          <Route path='/'>element={Hero}</Route>
+          <Route path='/' element={<HomePage/>} />
 
         </Routes>
         

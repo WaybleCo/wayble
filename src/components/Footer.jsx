@@ -5,7 +5,7 @@ import Facebook from "../assets/facebook.jpg";
 import { GoArrowUpRight } from "react-icons/go";
 const Footer = () => {
   return (
-    <div className="flex justify-around w-[100%] h-20 absolute bottom-0 bg-lightBlue">
+    <div className="flex justify-around w-[100%] h-20 bottom-0 bg-lightBlue">
         <div className="text-darkBlue font-semibold flex justify-around items-center w-[30%] h-[100%] ">
             <div className="flex">
                 <h2>Contact Us</h2> 
