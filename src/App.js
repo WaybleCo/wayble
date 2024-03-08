@@ -11,6 +11,8 @@ function App() {
       <div>
         <Navbar/>
         <Carousel/>
+        {/*<Navbar/>*/}
+        <Hero/>
         <Routes>
           <Route path='/'>element={Hero}</Route>
 
