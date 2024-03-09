@@ -3,7 +3,7 @@ import Picture from "../assets/happy_man_working.jpg"
 
 const Hero = () => {
   return (
-    <div className="text-darkBlue relative flex flex-col-reverse my-16 lg:pt-0 lg:flex-col lg:pb-0">
+    <div className="text-darkBlue font-spline relative flex flex-col-reverse my-16 lg:pt-0 lg:flex-col lg:pb-0">
       <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
         <svg
           className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -36,7 +36,7 @@ const Hero = () => {
           Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <div className="flex items-center">
-            <a href="/" className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-mediumBlue hover:bg-darkBlue focus:shadow-outline focus:outline-none">
+            <a href="/" className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium font-semibold tracking-wide text-white transition duration-200 rounded shadow-md bg-mediumBlue hover:bg-darkBlue focus:shadow-outline focus:outline-none">
               Get Started </a>
           </div>
         </div>

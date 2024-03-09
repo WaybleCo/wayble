@@ -8,6 +8,9 @@ module.exports = {
         'lightBlue': '#DEF7FF',
         'mediumBlue': '#2D8BBE',
         'darkBlue': '#0A2D49',
+      },
+      fontFamily: {
+        'spline': ["Spline Sans", "sans-serif"],
       }
     },
   },

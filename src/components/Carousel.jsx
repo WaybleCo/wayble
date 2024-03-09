@@ -24,18 +24,6 @@ function Carousel() {
         {
           url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80',
         },
-        /*{
-            Picture
-        },
-        {
-            Picture2
-        },
-        {
-            Picture3
-        },
-        {
-            Picture4
-        },*/
       ];
     
       const [currentIndex, setCurrentIndex] = useState(0);
@@ -57,12 +45,11 @@ function Carousel() {
       };
     
       return (
-        <div className='max-w-[500px] h-[500px] w-full m-auto py-20 px-4 mt-40 relative group'>
+        <div className='font-spline max-w-[1000px] h-[750px] w-full m-auto py-20 px-4 mt-[-40px] relative group'>
           <div
             style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-            //style={{ backgroundImage: `${slides[currentIndex]}`}}
-            className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-          ></div>
+            className='w-full h-full rounded-2xl bg-center bg-cover duration-500'>
+          </div>
           {/* Left Arrow */}
           <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer'>
             <BsChevronCompactLeft onClick={prevSlide} size={30} />
@@ -76,8 +63,7 @@ function Carousel() {
               <div
                 key={slideIndex}
                 onClick={() => goToSlide(slideIndex)}
-                className='text-2xl cursor-pointer'
-                >
+                className='text-2xl cursor-pointer'>
                 <RxDotFilled />
               </div>
             ))}
